@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import AddTodo from './components/AddTodo/AddTodo'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="todo__wrapper">
+        <div className="todo__body">
+          <div className="todo__header">
+            <p>CRUD application Todo list</p>
+            <p>You can also add multiple item by separating them by comma</p>
+            <p>
+              <i>Like Learn JS, Learn HTML, Get a job etc.</i>
+            </p>
+          </div>
+          <AddTodo></AddTodo>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
