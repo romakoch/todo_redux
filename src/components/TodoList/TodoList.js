@@ -4,6 +4,7 @@ import { todoSelectors } from '../../store/todoSlice'
 import Todo from './Todo'
 const TodoList = () => {
   const allTodos = useSelector(todoSelectors.selectEntities)
+  const todoCount = useSelector(todoSelectors.selectTotal)
   const todoList = []
   console.log(allTodos)
   for (const id in allTodos) {
@@ -26,7 +27,7 @@ const TodoList = () => {
 
       <ul>{todoList}</ul>
 
-      <h3>Count:</h3>
+      <h3>Count: {todoCount}</h3>
 
       <button className="delete-btn">Delete all</button>
     </div>
