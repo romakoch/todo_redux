@@ -37,7 +37,9 @@ const AddTodo = () => {
           onChange={(e) => setText(e.target.value)}
         />
       </div>
-      <button onClick={submit}>Add todo</button>
+      <button className="add" onClick={submit}>
+        Add todo
+      </button>
     </>
   )
 }

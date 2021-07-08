@@ -1,41 +1,121 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.todo__wrapper {
+  position: absolute;
+  padding: 3%;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #5c5c5c;
+  border-radius: 10%;
+}
+
+.todo__body {
   text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo__header p {
+  font-size: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo__header p i {
+  font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  margin: 10px;
+  font-size: 20px;
+  padding: 10px 30px 10px 30px;
+  color: white;
+  border: 0;
+  border-radius: 30px;
+  width: 200px;
+}
+
+.todo__list {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.todo__list .todos {
+  display: flex;
+  width: 50%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  align-self: center;
 }
 
-.App-link {
-  color: #61dafb;
+.todo {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 3px solid #5c5c5c;
+  border-radius: 100px;
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo span {
+  margin-left: 10px;
 }
 
-.add-todo {
+todo__list__wrapper {
+  display: flex;
+  width: 50%;
+}
+
+.todo__item__wrapper {
+  position: relative;
+  display: flex;
+}
+
+.todo button {
+  margin: 5px;
+  font-size: 15px;
+  padding: 0px 2px 1px 2px;
+}
+
+button.add {
+  background-color: green;
+}
+
+button.deleteOne {
+  width: 30px;
+  background-color: tomato;
+}
+
+button.deleteAll {
+  align-self: center;
+  background-color: red;
+}
+
+button.restore {
+  align-self: center;
+  background-color: lightgreen;
+}
+
+button.restore.one {
+  height: 20px;
+  width: 60px;
+}
+
+.deleted_todo button {
+  margin: 5px;
+  font-size: 15px;
+  /* padding: 10px 20px 10px 20px; */
+  padding: 0;
+}
+
+.wrap_deleted_todo {
+  display: flex;
+  align-self: center;
 }
